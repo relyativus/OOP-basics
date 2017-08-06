@@ -1,5 +1,8 @@
 package co.inventorsoft.oop.basic.model;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+
 public class Person {
 
     private String firstName;
@@ -8,12 +11,29 @@ public class Person {
 
     private Passport passport;
 
-    private int age;
+    private LocalDateTime birthDate;
 
-    public Person(final String firstName, final String lastName, final int age) {
+    /**
+     * Constructor for existing persons
+     *
+     * @param firstName person's first name
+     * @param lastName  person's last name
+     * @param birthDate person's birth date
+     */
+    public Person(final String firstName, final String lastName, final LocalDateTime birthDate) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
+        this.birthDate = birthDate;
+    }
+
+    /**
+     * Constructor for newborns
+     *
+     * @param firstName newborn first name
+     * @param lastName  newborn last name
+     */
+    public Person(final String firstName, final String lastName) {
+        this(firstName, lastName, LocalDateTime.now());
     }
 
     public String getFirstName() {
@@ -40,11 +60,7 @@ public class Person {
         this.passport = passport;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
+    public long getAge() {
+        return ChronoUnit.YEARS.between(birthDate, LocalDateTime.now());
     }
 }
