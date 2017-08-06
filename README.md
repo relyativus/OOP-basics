@@ -18,4 +18,4 @@ Tags to follow:
 10) person-identitity-scale
 
 Your test project taks:
-https://docs.google.com/document/d/1rOAD5RcQraEb2GLZh0hNlgXXOXzS5DMeKT0qSbF5uWU/edit
+https://docs.google.com/document/d/1rOAD5RcQraEb2GLZh0hNlgXXOXzS5DMeKT0qSbF5uWU/edit?usp=sharing
