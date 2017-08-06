@@ -1,5 +1,7 @@
 package co.inventorsoft.oop.basic.model.goverment.document;
 
+import java.time.LocalDateTime;
+
 public class BirthCertificate implements PersonIdentity {
     private static int ID_COUNTER = 0;
 
@@ -9,12 +11,15 @@ public class BirthCertificate implements PersonIdentity {
 
     private String lastName;
 
+    private LocalDateTime birthDate;
+
     private String address;
 
-    BirthCertificate(final String firstName, final String lastName, final String address) {
+    BirthCertificate(final String firstName, final String lastName, final LocalDateTime birthDate, final String address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
+        this.birthDate = birthDate;
         this.personId = "BC" + ID_COUNTER++;
     }
 

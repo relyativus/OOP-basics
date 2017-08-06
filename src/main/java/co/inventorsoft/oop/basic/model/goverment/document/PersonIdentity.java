@@ -9,6 +9,4 @@ public interface PersonIdentity {
     String getLastName();
 
     String getAddress();
-
-    //em... passport needs photo, but birth certificate doesn't
 }
