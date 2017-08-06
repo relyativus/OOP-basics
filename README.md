@@ -16,3 +16,6 @@ Tags to follow:
 8) passport-office
 9) person-identity-encapsulation
 10) person-identitity-scale
+
+Your test project taks:
+https://docs.google.com/document/d/1rOAD5RcQraEb2GLZh0hNlgXXOXzS5DMeKT0qSbF5uWU/edit
