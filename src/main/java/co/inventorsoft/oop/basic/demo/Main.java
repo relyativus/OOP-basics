@@ -19,7 +19,7 @@ public class Main {
         printAge(martynBorodavka);
 
         martynBorodavka.setAge(-2); //we cannot change created person's age which is makes sense
-        martynBorodavka.setPassport(new Passport()); //we can create objects we are not responsible to create
+        martynBorodavka.setPassport(new Passport()); //we cannot create passport object without required info
 
         /*
         * we can omit birth date for newborns but age is calculation right. But again we don't care. thanks for encapsulation
