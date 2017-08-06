@@ -1,6 +1,6 @@
 package co.inventorsoft.oop.basic.model;
 
-import co.inventorsoft.oop.basic.model.goverment.document.Passport;
+import co.inventorsoft.oop.basic.model.goverment.document.PersonIdentity;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -11,7 +11,7 @@ public class Person {
 
     private String lastName;
 
-    private Passport passport;
+    private PersonIdentity personIdentity;
 
     private LocalDateTime birthDate;
 
@@ -54,12 +54,12 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public Passport getPassport() {
-        return passport;
+    public PersonIdentity getPersonIdentity() {
+        return personIdentity;
     }
 
-    public void setPassport(Passport passport) {
-        this.passport = passport;
+    public void setPersonIdentity(PersonIdentity personIdentity) {
+        this.personIdentity = personIdentity;
     }
 
     public LocalDateTime getBirthDate() {
