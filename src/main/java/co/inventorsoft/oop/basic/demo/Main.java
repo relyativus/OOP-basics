@@ -22,12 +22,12 @@ public class Main {
 
         personIdentityDepartment.applyForPerson(martynBorodavka,
                 new PassportDocuments(martynBorodavka, "Khmelnytskii", new BufferedImage(3, 4, 1)));
-        System.out.println("Identity document for Martyn "+martynBorodavka.getPersonIdentity().getClass());
+        System.out.println("Identity document for Martyn " + martynBorodavka.getPersonIdentity().getClass());
 
         final Person newBorn = new Person("Ivan", "Ivanenko");
         personIdentityDepartment.applyForPerson(newBorn,
                 new BirthCertificateDocuments(newBorn, "Chernivtsi"));
-        System.out.println("Identity document for newborn "+newBorn.getPersonIdentity().getClass());
+        System.out.println("Identity document for newborn " + newBorn.getPersonIdentity().getClass());
     }
 
 }

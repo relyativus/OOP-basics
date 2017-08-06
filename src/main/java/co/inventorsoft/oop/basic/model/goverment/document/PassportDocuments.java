@@ -3,6 +3,7 @@ package co.inventorsoft.oop.basic.model.goverment.document;
 import co.inventorsoft.oop.basic.model.Person;
 
 import java.awt.image.BufferedImage;
+import java.time.LocalDateTime;
 
 public class PassportDocuments implements DocumentDetails {
 
@@ -12,32 +13,26 @@ public class PassportDocuments implements DocumentDetails {
 
     private String address;
 
+    private LocalDateTime dateOfBirth;
+
     private BufferedImage photo;
 
-    public PassportDocuments(final Person person, final String addres, final BufferedImage photo) {
+    public PassportDocuments(final Person person, final String address, final BufferedImage photo) {
         this.firstName = person.getFirstName();
         this.lastName = person.getLastName();
-        this.address = addres;
+        this.address = address;
         this.photo = photo;
+        this.dateOfBirth = person.getBirthDate();
     }
 
     @Override
-    public String getFirstName() {
-        return firstName;
-    }
-
-    @Override
-    public String getLastName() {
-        return lastName;
-    }
-
-    @Override
-    public String getAddress() {
-        return address;
-    }
-
-    @Override
-    public BufferedImage getPhoto() {
-        return photo;
+    public PersonIdentity create() {
+        return new Passport(
+                firstName,
+                lastName,
+                dateOfBirth,
+                photo,
+                address
+        );
     }
 }
