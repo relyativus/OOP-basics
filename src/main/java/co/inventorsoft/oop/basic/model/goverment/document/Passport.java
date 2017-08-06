@@ -1,4 +1,4 @@
-package co.inventorsoft.oop.basic.model;
+package co.inventorsoft.oop.basic.model.goverment.document;
 
 import java.awt.image.BufferedImage;
 import java.time.LocalDateTime;
@@ -15,11 +15,11 @@ public class Passport {
 
     private String address;
 
-    public Passport(final String firstName,
-                    final String lastName,
-                    final LocalDateTime dateOfBirth,
-                    final BufferedImage photo,
-                    final String address) {
+    Passport(final String firstName,
+             final String lastName,
+             final LocalDateTime dateOfBirth,
+             final BufferedImage photo,
+             final String address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
@@ -47,11 +47,11 @@ public class Passport {
         return address;
     }
 
-    public void setPhoto(BufferedImage photo) {
+    void setPhoto(BufferedImage photo) {
         this.photo = photo;
     }
 
-    public void setAddress(String address) {
+    void setAddress(String address) {
         this.address = address;
     }
 }
