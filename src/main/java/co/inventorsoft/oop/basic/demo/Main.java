@@ -32,6 +32,12 @@ public class Main {
          */
         passportDepartment.updatePhoto(martynBorodavka, new BufferedImage(3, 4, 0));
 
+        final Person newBorn = new Person("Ivan", "Ivanenko");
+        /*
+            oops! new born cannot have a passport
+         */
+        passportDepartment.applyForPerson(newBorn, "Ukraine", new BufferedImage(3, 4, 0));
+
     }
 
 }
