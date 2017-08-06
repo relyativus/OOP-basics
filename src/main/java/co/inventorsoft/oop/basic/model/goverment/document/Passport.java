@@ -1,19 +1,15 @@
 package co.inventorsoft.oop.basic.model.goverment.document;
 
+import co.inventorsoft.oop.basic.model.AbstractPersonInfo;
+
 import java.awt.image.BufferedImage;
 import java.time.LocalDateTime;
 
-public class Passport implements PersonIdentity {
+public class Passport extends AbstractPersonInfo implements PersonIdentity {
 
     private static int ID_COUNTER = 0;
 
     private String personId;
-
-    private String firstName;
-
-    private String lastName;
-
-    private LocalDateTime dateOfBirth;
 
     private BufferedImage photo;
 
@@ -24,9 +20,7 @@ public class Passport implements PersonIdentity {
              final LocalDateTime dateOfBirth,
              final BufferedImage photo,
              final String address) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.dateOfBirth = dateOfBirth;
+        super(firstName, lastName, dateOfBirth);
         this.photo = photo;
         this.address = address;
         this.personId = "KR" + ID_COUNTER++;
@@ -41,7 +35,7 @@ public class Passport implements PersonIdentity {
     }
 
     public LocalDateTime getDateOfBirth() {
-        return dateOfBirth;
+        return birthDate;
     }
 
     public BufferedImage getPhoto() {
@@ -50,6 +44,11 @@ public class Passport implements PersonIdentity {
 
     public String getAddress() {
         return address;
+    }
+
+    @Override
+    public LocalDateTime getBirthDate() {
+        return birthDate;
     }
 
     @Override

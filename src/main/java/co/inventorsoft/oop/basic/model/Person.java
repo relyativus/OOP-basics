@@ -5,15 +5,9 @@ import co.inventorsoft.oop.basic.model.goverment.document.PersonIdentity;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
-public class Person {
-
-    private String firstName;
-
-    private String lastName;
+public class Person extends AbstractPersonInfo {
 
     private PersonIdentity personIdentity;
-
-    private LocalDateTime birthDate;
 
     /**
      * Constructor for existing persons
@@ -23,9 +17,7 @@ public class Person {
      * @param birthDate person's birth date
      */
     public Person(final String firstName, final String lastName, final LocalDateTime birthDate) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthDate = birthDate;
+        super(firstName, lastName, birthDate);
     }
 
     /**
@@ -39,11 +31,11 @@ public class Person {
     }
 
     public String getFirstName() {
-        return personIdentity.getFirstName();
+        return personIdentity == null ? firstName : personIdentity.getFirstName();
     }
 
     public String getLastName() {
-        return personIdentity.getLastName();
+        return personIdentity == null ? lastName : personIdentity.getLastName();
     }
 
     public PersonIdentity getPersonIdentity() {
@@ -55,7 +47,7 @@ public class Person {
     }
 
     public LocalDateTime getBirthDate() {
-        return birthDate;
+        return personIdentity == null ? birthDate : personIdentity.getBirthDate();
     }
 
     public long getAge() {

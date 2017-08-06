@@ -1,25 +1,19 @@
 package co.inventorsoft.oop.basic.model.goverment.document;
 
-import co.inventorsoft.oop.basic.model.Person;
+import co.inventorsoft.oop.basic.model.AbstractPersonInfo;
 
 import java.time.LocalDateTime;
 
-public class BirthCertificateDocuments implements DocumentDetails {
-
-    private String firstName;
-
-    private String lastName;
-
-    private LocalDateTime birthDate;
+public class BirthCertificateDocuments extends AbstractPersonInfo implements DocumentDetails {
 
     private String address;
 
-    public BirthCertificateDocuments(final Person person,
+    public BirthCertificateDocuments(final String firstName,
+                                     final String lastName,
+                                     final LocalDateTime birthDate,
                                      final String address) {
-        this.firstName = person.getFirstName();
-        this.lastName = person.getLastName();
+        super(firstName, lastName, birthDate);
         this.address = address;
-        this.birthDate = person.getBirthDate();
     }
 
     @Override

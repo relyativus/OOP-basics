@@ -20,13 +20,25 @@ public class Main {
         final Person martynBorodavka = new Person("Martyn", "Borodavka",
                 LocalDateTime.of(LocalDate.of(1736, Month.JULY, 10), LocalTime.now()));
 
-        personIdentityDepartment.applyForPerson(martynBorodavka,
-                new PassportDocuments(martynBorodavka, "Khmelnytskii", new BufferedImage(3, 4, 1)));
+        final PassportDocuments martynsDocuments = new PassportDocuments(
+                martynBorodavka.getFirstName(),
+                martynBorodavka.getLastName(),
+                martynBorodavka.getBirthDate(),
+                "Khmelnytskii",
+                new BufferedImage(3, 4, 1)
+        );
+
+        personIdentityDepartment.create(martynBorodavka, martynsDocuments);
         System.out.println("Identity document for Martyn " + martynBorodavka.getPersonIdentity().getClass());
 
         final Person newBorn = new Person("Ivan", "Ivanenko");
-        personIdentityDepartment.applyForPerson(newBorn,
-                new BirthCertificateDocuments(newBorn, "Chernivtsi"));
+        final BirthCertificateDocuments newBornsDocuments = new BirthCertificateDocuments(
+                newBorn.getFirstName(),
+                newBorn.getLastName(),
+                newBorn.getBirthDate(),
+                "Chernivtsi"
+        );
+        personIdentityDepartment.create(newBorn, newBornsDocuments);
         System.out.println("Identity document for newborn " + newBorn.getPersonIdentity().getClass());
     }
 
