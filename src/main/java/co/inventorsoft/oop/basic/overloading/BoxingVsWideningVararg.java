@@ -1,6 +1,6 @@
 package co.inventorsoft.oop.basic.overloading;
 
-class Vararg {
+class BoxingVsWideningVararg {
     static void vararg(long... x) {
         System.out.println("long...");
     }

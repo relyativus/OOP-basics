@@ -16,3 +16,15 @@ Tags to follow:
 8) passport-office
 9) person-identity-encapsulation
 10) polymorphism
+
+
+Overload examples:
+1) WideningMain
+2) AddBoking
+3) AddVarargs
+4) BoxOrVararg
+5) Animal
+6) ReferenceWidening
+7) BoxingVsWideningVararg
+8) WidenAndBox
+9) ArraysVsVararg
