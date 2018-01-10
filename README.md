@@ -28,3 +28,4 @@ Overload examples:
 7) BoxingVsWideningVararg
 8) WidenAndBox
 9) ArraysVsVararg
+10) Fatality
