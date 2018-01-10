@@ -4,7 +4,7 @@ import co.inventorsoft.oop.basic.model.AbstractPersonInfo;
 
 import java.time.LocalDateTime;
 
-public class BirthCertificateDocuments extends AbstractPersonInfo implements DocumentDetails {
+public class BirthCertificateDocuments extends AbstractPersonInfo implements DocumentRequest {
 
     private String address;
 

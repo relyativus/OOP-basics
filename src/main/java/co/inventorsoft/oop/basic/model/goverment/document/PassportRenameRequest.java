@@ -1,6 +1,6 @@
 package co.inventorsoft.oop.basic.model.goverment.document;
 
-public class PersonRenameDocuments implements DocumentDetails {
+public class PassportRenameRequest implements DocumentRequest {
 
     private String newFirstName;
 
@@ -8,7 +8,7 @@ public class PersonRenameDocuments implements DocumentDetails {
 
     private Passport oldPassport;
 
-    public PersonRenameDocuments(String newFirstName, String newLastName, Passport oldPassport) {
+    public PassportRenameRequest(String newFirstName, String newLastName, Passport oldPassport) {
         this.newFirstName = newFirstName;
         this.newLastName = newLastName;
         this.oldPassport = oldPassport;

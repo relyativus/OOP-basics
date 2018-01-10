@@ -5,14 +5,14 @@ import co.inventorsoft.oop.basic.model.AbstractPersonInfo;
 import java.awt.image.BufferedImage;
 import java.time.LocalDateTime;
 
-public class PassportDocuments extends AbstractPersonInfo implements DocumentDetails {
+public class PassportRequest extends AbstractPersonInfo implements DocumentRequest {
 
     private String address;
 
     private BufferedImage photo;
 
-    public PassportDocuments(final String firstName, final String lastName, final LocalDateTime dateOfBirth,
-                             final String address, final BufferedImage photo) {
+    public PassportRequest(final String firstName, final String lastName, final LocalDateTime dateOfBirth,
+                           final String address, final BufferedImage photo) {
         super(firstName, lastName, dateOfBirth);
         this.address = address;
         this.photo = photo;

@@ -2,7 +2,7 @@ package co.inventorsoft.oop.basic.demo;
 
 import co.inventorsoft.oop.basic.model.Person;
 import co.inventorsoft.oop.basic.model.goverment.document.BirthCertificateDocuments;
-import co.inventorsoft.oop.basic.model.goverment.document.PassportDocuments;
+import co.inventorsoft.oop.basic.model.goverment.document.PassportRequest;
 import co.inventorsoft.oop.basic.model.goverment.document.PersonIdentityDepartment;
 import co.inventorsoft.oop.basic.model.goverment.document.PersonIdentityDepartmentOffice;
 
@@ -20,7 +20,7 @@ public class Main {
         final Person martynBorodavka = new Person("Martyn", "Borodavka",
                 LocalDateTime.of(LocalDate.of(1736, Month.JULY, 10), LocalTime.now()));
 
-        final PassportDocuments martynsDocuments = new PassportDocuments(
+        final PassportRequest martynsDocuments = new PassportRequest(
                 martynBorodavka.getFirstName(),
                 martynBorodavka.getLastName(),
                 martynBorodavka.getBirthDate(),
